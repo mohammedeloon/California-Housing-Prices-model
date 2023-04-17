@@ -10,3 +10,15 @@ Note: getting this right is critical as it directly affects the revenue.
 ## Quick EDA
 ![image](images/skim.png)
 ![image](images/plot.png)
+## Create a Test Set 
+In this stage, I created two sets: one for training(80%) and another for test(20%) using stratified  sampling based on the income 
+category. The income category is a feature built on top of median income value feature.
+```python
+df['income_cat'] = pd.cut(df['median_income'] , bins=[0. , 1.5 , 3.0 , 4.5 , 6.0 , np.inf]  , labels=[1,2,3,4,5])
+df['income_cat'].hist()
+```
+![image](images/myplot.png)
+This way we can ensure that the test set is representative of the various categories of incomes in
+the whole dataset.
+
+
