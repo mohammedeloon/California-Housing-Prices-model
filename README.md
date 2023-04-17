@@ -17,8 +17,15 @@ category. The income category is a feature built on top of median income value f
 df['income_cat'] = pd.cut(df['median_income'] , bins=[0. , 1.5 , 3.0 , 4.5 , 6.0 , np.inf]  , labels=[1,2,3,4,5])
 df['income_cat'].hist()
 ```
+
 ![image](images/myplot.png)
+
 This way we can ensure that the test set is representative of the various categories of incomes in
 the whole dataset.
 
-
+## Visualize the Data to Gain Insights
+![image](images/geographical_scatterplot.png)
+![image](images/geographical_scatterplot_with_alpha.png)
+![image](images/housing_price_scatter.png)
+![image](images/scatter_matrix.png)
+![image](images/scatter_house_value_house_income.png)
